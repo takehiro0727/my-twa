@@ -25,7 +25,8 @@ function App() {
         </button>        
       </div>
       <div className="card">
-        <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
+        {/* <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}> */}
+        <button onClick={() => WebApp.showAlert(WebApp.initData)}>
             Show Alert
         </button>
       </div>
