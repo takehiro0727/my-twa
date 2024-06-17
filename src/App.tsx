@@ -4,9 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import WebApp from '@twa-dev/sdk'
+import { initUtils } from '@tma.js/sdk';
 
 function App() {
   const [count, setCount] = useState(0)
+  const utils = initUtils();
 
   return (
     <>
@@ -27,8 +29,9 @@ function App() {
       <div className="card">
         {/* <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}> */}
         {/* <button onClick={() => WebApp.showAlert(`${WebApp.initDataUnsafe.user?.id}`)}> */}
-        <button onClick={() => WebApp.showAlert(`${WebApp.initDataUnsafe.chat?.title}`)}>
-            Show Alert
+        <button onClick={() => utils.openTelegramLink('https://t.me/share/url?url=https://t.me/durictma_bot?text=test'
+        )}>
+            Invite a friend
         </button>
       </div>
     </>
